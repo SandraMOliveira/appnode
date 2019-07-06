@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Idade</th> 
+          <th scope="col" colspan ="2" > Açoes</th>         
+        </tr>
+      </thead>
+      <tbody>
+        <% alunos.forEach(function(item){ %>
+        <tr>
+          <th scope="row">1</th>
+          <td><%= item.nome %></td>
+          <td><%= item.idade %></td> 
+          <td><a class="btn btn-primary" >Editar</td>         
+          <td><a class="btn btn-warning" href="delete/<%= item._id%>" onclick="return confirm('Tem certeza?')">Excluir</a></td>
+        </tr>
+       <% }) %>
+      </tbody>
+    </table>
+    <a class="btn btn-success" href="/new">Cadastrar Novo</a>
+  </body>
+</html>
