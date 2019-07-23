@@ -13,13 +13,13 @@
           <th scope="col">#</th>
           <th scope="col">Nome</th>
           <th scope="col">Idade</th> 
-          <th scope="col" colspan ="2" > Açoes</th>         
+          <th scope="col" colspan ="2" > Ações</th>         
         </tr>
       </thead>
       <tbody>
         <% alunos.forEach(function(item){ %>
         <tr>
-          <th scope="row">1</th>
+          <th scope="row">?</th>
           <td><%= item.nome %></td>
           <td><%= item.idade %></td> 
           <td><a class="btn btn-primary" >Editar</td>         
@@ -28,6 +28,6 @@
        <% }) %>
       </tbody>
     </table>
-    <a class="btn btn-success" href="/new">Cadastrar Novo</a>
+    <a class="btn btn-success" href="/alunos/new">Cadastrar Novo</a>
   </body>
 </html>
