@@ -7,16 +7,22 @@ mongoClient.connect("mongodb://localhost:27017")
     function findAll(callback){
         global.conn.collection("alunos").find({}).toArray(callback);
     }
+
+    function findAlunos(id, callback){
+        global.conn.collection("alunos").findOne({_id: ObjectId(id) }, callback);
+    }
     
-    function deleteAlunos(id,callback){
-        global.conn.collection("alunos").remove({ _id: ObjectId("5d1d47cc951bc6b6c9c2c6bb")}),(callback);
+    function deleteAlunos(id, callback){
+        global.conn.collection("alunos").remove({ _id: ObjectId(id) }, callback);
     }
     
     function insertAlunos(alunos,callback){
         global.conn.collection("alunos").insert(alunos, callback);
     }
 
-    function updateAlunos (id, alunos, callback){
+    function updateAlunos(id, alunos, callback){
         global.conn.collection("alunos").update({_id: ObjectId(id), alunos, callback});
     }
-    module.exports = {findAll, deleteAlunos, insertAlunos, updateAlunos}
+
+    
+    module.exports = {findAll, deleteAlunos, insertAlunos, updateAlunos, findAlunos}
