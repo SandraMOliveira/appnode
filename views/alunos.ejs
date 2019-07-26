@@ -22,8 +22,8 @@
           <th scope="row">?</th>
           <td><%= item.nome %></td>
           <td><%= item.idade %></td>                 
-          <td><a class="btn btn-info" href="/alunos/edit/<%= item._id%>" >Editar</a></td>
-          <td><a class="btn btn-danger" href="delete/<%= item._id%>" onclick="return confirm('Tem certeza?')">Excluir</a></td>
+          <td><a class="btn btn-info" href="/alunos/edit/<%= item._id %>" >Editar</a></td>
+          <td><a class="btn btn-danger" href="delete/<%= item._id %>" onclick="return confirm('Tem certeza?')">Excluir</a></td>
         </tr>
        <% }) %>
       </tbody>

@@ -12,7 +12,7 @@ router.get('/all', function(req, res, next) {
 
 router.get('/delete/:id', function(req, res, next){
     var db = require("../db");
-    db.deleteAlunos(req.param.id, function(err,docs){
+    db.deleteAlunos(req.params.id, function(err,docs){
         if(err) return console.log(err);
         res.redirect('/alunos/all');
     })

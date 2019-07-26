@@ -21,7 +21,7 @@ mongoClient.connect("mongodb://localhost:27017")
     }
 
     function updateAlunos(id, alunos, callback){
-        global.conn.collection("alunos").update({_id: ObjectId(id), alunos, callback});
+        global.conn.collection("alunos").update({_id: ObjectId(id)}, alunos, callback);
     }
 
     
